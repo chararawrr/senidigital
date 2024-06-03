@@ -1,0 +1,343 @@
+:root {
+    --purple: #af46bd;
+    --light: pink;
+    --dark: blueviolet;
+    --tua: #371a4b;
+}
+
+body{
+    background-color: black;
+}
+
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #6d46a0;
+    color: #fff;
+    padding: 15px 58px;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    background: var(--light);
+}
+
+section {
+    padding: 0% 0%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem var(--dark);
+}
+
+header .logo {
+    font-size: 30px;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .logo span {
+    color: var(--purple);
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+    position: relative;
+}
+
+header .navbar a:hover {
+    color: var(--purple);
+    transition: 1s;
+}
+
+header .navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: violet;
+    transition: .4s;
+}
+
+header .navbar a:hover::before {
+    width: 100%;
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: var(--purple);
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(https://i.pximg.net/img-master/img/2023/04/16/09/35/40/107220511_p0_master1200.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    max-width: 50rem;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.home .content h3 {
+    font-size: 60px;
+    color: var(--light);
+}
+
+.home .content span {
+    font-size: 40px;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+
+.more {
+    display: flex;
+    align-items: center;
+    min-height: 80%;
+    padding-top: 3%;
+    background: linear-gradient(rgba(0,0,0,0.1), rgb(0, 0, 0, 1)), url(https://r4.wallpaperflare.com/wallpaper/346/517/218/digital-art-artwork-illustration-environment-purple-background-hd-wallpaper-e09015a99f46aee3385f97f66bf67428.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.more .content h3, .ill .content h3 {
+    font-size: 60px;
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.more .content p, .history .content p, .ill .content p, .teknik .content p{
+    font-size: 15px;
+    color: #fff;
+    margin-left: 10%;
+    margin-right: 10%;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 5%;
+}
+
+.card {
+    height: 300px;
+    width: 250px;
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color: #282636;
+    cursor: pointer;
+    box-shadow: 2px 2px 9px var(--tua);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow .3s ease-in-out;
+
+}
+
+.card img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 100px 0;
+}
+
+.txt-box {
+    font-family: Yu Gothic UI;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 25px;
+    color: rgba(255,255,255,0.7);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.card:hover img {
+    border-radius: 10px 10px 0 0;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 7px 7px var(--dark);
+    transition: box-shadow .3s ease-in-out;
+}
+
+.macam .content h2, .app .content h2{
+    font-size: 25px;
+    color: var(--light);
+    margin-left: 5%
+}
+
+.macam .content p, .app .content p{
+    font-size: 15px;
+    color: white;
+    padding-right: 20%;
+    line-height: 1.5;
+    margin-left: 5%
+}
+
+
+
+.app{
+    margin-top: 4%;
+    width: 100%;
+}
+
+.app .content, .ill .content, .macam .content, .jenis .content{
+    width: 100%;
+    height: 300px;
+    margin-left:auto;
+    margin-right:auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mnft .content h2{
+    font-size: 25px;
+    color: var(--light);
+    margin-left: 5%
+}
+
+.mnft .content p{
+    font-size: 15px;
+    color: white;
+    padding-right: 0%;
+    line-height: 1.5;
+    margin-left: 5%
+}
+
+
+.ill, .teknik, .history, .mnft, .home, .aboutme{
+    display: flex;
+    align-items: center;
+    min-height: 80%;
+    padding-top: 3%;
+    background: linear-gradient(rgba(0,0,0,0.1), rgb(0, 0, 0, 1)), url(https://r4.wallpaperflare.com/wallpaper/346/517/218/digital-art-artwork-illustration-environment-purple-background-hd-wallpaper-e09015a99f46aee3385f97f66bf67428.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutme img{
+    margin-right: 60%;
+    width: 300px;
+    height: 320px;
+    position: absolute;
+                top: 32%;
+                left: 55%;
+}
+
+h3{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+span{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0, 0, 0, 1);
+        clip-path: polygon(0 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0, 0, 0, 1);
+        display: block;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
